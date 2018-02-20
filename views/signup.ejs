@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Sign Up</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+		<div>
+			<% if (er != null) { %>
+			  <h2><%= er.message %></h2>
+			<% } %>
+		</div>
+			<div
+				class="col-sm-offset-4 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4"
+				style="margin-top: 10%;">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Sign Up</div>
+					<div class="panel-body">
+						<form class="form-horizontal" role="form" method="post"
+							action="createUser">
+							<div class="form-group">
+								<label class="col-sm-4 col-md-4 col-lg-4" for="inputPassword">First Name</label>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<input type="text" class="form-control"
+										name="fname" id="fName" placeholder="First Name" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 col-md-4 col-lg-4" for="inputPassword">Last Name</label>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<input type="text" class="form-control"
+										name="lname" id="lName" placeholder="Last Name" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 col-md-4 col-lg-4" for="inputPassword">Date of Birth</label>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<input type="date" class="form-control"
+										name="dob" id="dob"  required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 col-md-4 col-lg-4" for="inputPassword">Gender</label>
+								<!-- <form> -->
+									<input type="radio" name="gender" value="male" checked> Male<br>
+									<input type="radio" name="gender" value="female"> Female<br>								
+								 <!-- </form> -->
+							</div>
+
+
+
+							<div class="form-group">
+								<label class="col-sm-4 col-md-4 col-lg-4">Email id<div></div></label>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<input type="email" class="form-control" name="inputUsername"
+										id="inputUsername" placeholder="Email Id" required>
+								</div>
+							</div>
+							<br>
+							<div class="form-group">
+								<label class="col-sm-4 col-md-4 col-lg-4" for="inputPassword">Password</label>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<input type="password" class="form-control"
+										name="inputPassword" id="inputPassword" placeholder="Password" required>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div
+									class="col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+									<button type="submit" class="btn btn-primary">Sign Up</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
